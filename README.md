@@ -1,3 +1,12 @@
+## Users should be able to:
+
+1. Add new todos to the list.
+2. Mark todos as complete.
+3. Delete todos from the list.
+4. Filter by All/Inprogress/Completed todos.
+5. Clear all completed todos.
+6. Toggle light and dark mode.
+7. View the optimal layout for the app depending on their device's screen size.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

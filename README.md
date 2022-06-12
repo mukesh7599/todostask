@@ -7,6 +7,11 @@
 5. Clear all completed todos.
 6. Toggle light and dark mode.
 7. View the optimal layout for the app depending on their device's screen size.
+8. Data 
+
+## Site
+[Live Site](https://todosapp-task.netlify.app/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -11,11 +11,11 @@ const data = [
   { id: 3, content: "10 minutes meditation", completed: false },
   { id: 4, content: "Read for 1 hour", completed: false },
   { id: 5, content: "Pick up groceries", completed: false },
-  { id: 6, content: "Complete Todo App on Frontend Mentor", completed: false }
+  { id: 6, content: "Complete Todo App on Frontend Mentor", completed: false },
 ];
 
 function App() {
-  const [todos, setTodos] = useLocalStorage("todos",data);
+  const [todos, setTodos] = useLocalStorage("todos", data);
   const [themeLight, setThemeLight] = useState(true);
   const [filterStatus, setFilterStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState(todos);
@@ -40,21 +40,20 @@ function App() {
 
   return (
     <div className={`todoPage ${themeClass}`}>
-    <div className="mainContainer">
-      <Header themeLight={themeLight} setThemeLight={setThemeLight} />
-      <main>
-        <TodoForm todos={todos} setTodos={setTodos} />
-        <TodoList
-          todos={todos}
-          setTodos={setTodos}
-          filteredTodos={filteredTodos}
-          filterStatus={filterStatus}
-          setFilterStatus={setFilterStatus}
-        />
-      </main>
-      
+      <div className="mainContainer">
+        <Header themeLight={themeLight} setThemeLight={setThemeLight} />
+        <main>
+          <TodoForm todos={todos} setTodos={setTodos} />
+          <TodoList
+            todos={todos}
+            setTodos={setTodos}
+            filteredTodos={filteredTodos}
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+          />
+        </main>
+      </div>
     </div>
-  </div>
   );
 }
 

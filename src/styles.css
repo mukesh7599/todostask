@@ -8,7 +8,7 @@
 }
 
 :root {
-  /* Light Theme */
+
   --color-very-light-gray: hsl(0, 0%, 98%);
   --color-very-light-grayish-blue: hsl(236, 33%, 92%);
   --color-light-grayish-blue: hsl(233, 11%, 84%);
@@ -17,7 +17,7 @@
   --color-gradient-start: hsl(192, 100%, 67%);
   --color-gradient-end: hsl(280, 87%, 65%);
 
-  /* Dark Theme */
+ 
   --color-very-dark-blue: hsl(235, 21%, 11%);
   --color-very-dark-desaturated-blue: hsl(235, 24%, 19%);
   --color-dark-light-grayish-blue: hsl(234, 39%, 85%);
@@ -49,7 +49,7 @@ button {
   height: 100vh;
   z-index: 1;
 }
-/* Theme LIGHT */
+
 .todoPage.light {
   background-color: var(--color-very-light-gray);
   background-image: url(../public/pics/bg-desktop-light.jpg);
@@ -63,7 +63,7 @@ button {
   font-weight: 700;
 }
 
-/* Theme DARK */
+
 .todoPage.dark {
   background-color: var(--color-very-dark-blue);
   background-image: url(../public/pics/bg-desktop-dark.jpg);
@@ -75,7 +75,7 @@ button {
   margin: 0 auto;
 }
 
-/* Header Component */
+
 header {
   color: white ;
   display: flex;
@@ -105,7 +105,7 @@ h1 {
   color: var(--color-dark-very-dark-grayish-blue-hover);
 }
 
-/* TodoForm Component */
+
 .form-control {
   background-color: white;
   width: 100%;
@@ -166,7 +166,6 @@ h1 {
   width: 100%;
 }
 
-/* TodoList Component */
 .filter-control-for-mobile {
   display: none;
 }
@@ -251,7 +250,6 @@ h1 {
   z-index: 1;
   border-radius:1rem;
   bottom: 40px;
-  /* border-top: 0.1rem solid var(--color-very-light-grayish-blue); */
 }
 .todoPage.dark .filterControl {
   border-top-color: var(--color-dark-very-dark-grayish-blue-hover);
@@ -267,9 +265,6 @@ h1 {
 }
 
 
-/**
- * For MOBILE
- */
 @media screen and (max-width: 600px) {
   .todoPage {
     padding-left: 2.4rem;
@@ -297,7 +292,6 @@ h1 {
     margin-bottom: 4.8rem; 
   }
 
-  /* Dark Theme */
   .todoPage.dark {
     background-image: url(../public/pics/bg-mobile-dark.jpg);
   }

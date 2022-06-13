@@ -7,7 +7,7 @@ const TodoList = ({
   setTodos,
   filteredTodos,
   filterStatus,
-  setFilterStatus
+  setFilterStatus,
 }) => {
   const [leftTodoCount, setLeftTodoCount] = useState(0);
 
@@ -40,26 +40,25 @@ const TodoList = ({
             ))}
           </ul>
         )}
-</section>
-        <div className="filterControl">
-          <div className="todos-count">{leftTodoCount} items left</div>
+      </section>
+      <div className="filterControl">
+        <div className="todos-count">{leftTodoCount} Task left</div>
 
-          <div className="control-btn group filter-control-for-desktop">
-            <TodoFilterControl
-              filterStatus={filterStatus}
-              setFilterStatus={setFilterStatus}
-            />
-          </div>
-
-          <div className="control-btn">
-            <button className="btn" onClick={clearCompletedTodos}>
-              Clear Completed
-            </button>
-          </div>
+        <div className="control-btn group filter-control-for-desktop">
+          <TodoFilterControl
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+          />
         </div>
-    
 
-      {/* For Mobile */}
+        <div className="control-btn">
+          <button className="btn" onClick={clearCompletedTodos}>
+            Clear Completed
+          </button>
+        </div>
+      </div>
+
+      
       <section className="filter-control-for-mobile">
         <div className="control-btn group">
           <TodoFilterControl

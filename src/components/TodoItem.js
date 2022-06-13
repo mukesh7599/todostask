@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import IconCheck from "../images/icon-check.svg";
-import { AiOutlineClose } from 'react-icons/ai';
-import { notification } from 'antd';
-import 'antd/dist/antd.css'; 
+import { AiOutlineClose } from "react-icons/ai";
+import { notification } from "antd";
+import "antd/dist/antd.css";
 const TodoItem = ({ todo, todos, setTodos }) => {
   const [mutableTodo, setMutableTodo] = useState(todo);
 
@@ -13,27 +13,24 @@ const TodoItem = ({ todo, todos, setTodos }) => {
     ""
   );
 
-  const deleteNotification = placement => {
+  const deleteNotification = (placement) => {
     notification.info({
       message: `Done`,
-      description:
-        'Task Deleted',
+      description: "Task Deleted",
       placement,
     });
   };
-  const completedNotification = placement => {
+  const completedNotification = (placement) => {
     notification.info({
       message: `Done`,
-      description:
-        'Great Work!!',
+      description: "Great Work!!",
       placement,
     });
   };
-  const activeNotification = placement => {
+  const activeNotification = (placement) => {
     notification.info({
       message: `warning`,
-      description:
-        'Tasks Uncompleted',
+      description: "Tasks Uncompleted",
       placement,
     });
   };
@@ -41,9 +38,9 @@ const TodoItem = ({ todo, todos, setTodos }) => {
   function deleteTodo(index) {
     const result = todos.filter((item) => item.id !== index);
     console.log("todos", result);
-    result.splice(index,1);
+    result.splice(index, 1);
     setTodos(result);
-    deleteNotification('top')
+    deleteNotification("top");
   }
 
   const toggleCompleted = () => {
@@ -52,15 +49,12 @@ const TodoItem = ({ todo, todos, setTodos }) => {
       item.id === todo.id ? { ...item, completed: !item.completed } : item
     );
     setTodos(updatedTodos);
-    mutableTodo.completed && activeNotification('top');
-    !mutableTodo.completed && completedNotification('top');
+    mutableTodo.completed && activeNotification("top");
+    !mutableTodo.completed && completedNotification("top");
   };
- 
-
 
   return (
     <li className={classes}>
-      
       <input
         id={`todoCheckbox-${todo.id}`}
         type="checkbox"
@@ -73,12 +67,14 @@ const TodoItem = ({ todo, todos, setTodos }) => {
         </span>
       </div>
       <div className="todoContent">
-      <p style={{margin:0}}>{mutableTodo.content}</p>
-      <button  style={{border:0,backgroundColor:"transparent"}} onClick={deleteTodo}>
-      <AiOutlineClose/>
-      </button>
+        <p style={{ margin: 0 }}>{mutableTodo.content}</p>
+        <button
+          style={{ border: 0, backgroundColor: "transparent" }}
+          onClick={deleteTodo}
+        >
+          <AiOutlineClose />
+        </button>
       </div>
-     
     </li>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
 const TodoFilterControl = ({ filterStatus, setFilterStatus }) => {
-  const handleClick = (status) => {
+  const handleFilter = (status) => {
     setFilterStatus(status);
   };
 
@@ -9,19 +9,19 @@ const TodoFilterControl = ({ filterStatus, setFilterStatus }) => {
     <div className="control-btn group">
       <button
         className={filterStatus === "all" ? "btn active" : "btn"}
-        onClick={() => handleClick("all")}
+        onClick={() => handleFilter("all")}
       >
         All
       </button>
       <button
         className={filterStatus === "active" ? "btn active" : "btn"}
-        onClick={() => handleClick("active")}
+        onClick={() => handleFilter("active")}
       >
         Inprogress
       </button>
       <button
         className={filterStatus === "completed" ? "btn active" : "btn"}
-        onClick={() => handleClick("completed")}
+        onClick={() => handleFilter("completed")}
       >
         Completed
       </button>

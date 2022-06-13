@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GrAdd } from 'react-icons/gr';
+import { GrAdd } from "react-icons/gr";
 const generateId = (array) => {
   const ids = array.map((item) => item.id);
   return Math.max(...ids) + 1;
@@ -8,17 +8,17 @@ const generateId = (array) => {
 const TodoForm = ({ todos, setTodos }) => {
   const [todoInput, setTodoInput] = useState("");
 
-  const handleChange = (e) => {
+  const inputChange = (e) => {
     setTodoInput(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const inputSubmit = (e) => {
     e.preventDefault();
     if (todoInput) {
       const newTodo = {
         id: generateId(todos),
         content: todoInput.trim(),
-        completed: false
+        completed: false,
       };
 
       setTodos([newTodo, ...todos]);
@@ -28,9 +28,7 @@ const TodoForm = ({ todos, setTodos }) => {
 
   return (
     <div className="form-control">
-    
-
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={inputSubmit}>
         <input
           type="text"
           name="todo-input"
@@ -38,11 +36,15 @@ const TodoForm = ({ todos, setTodos }) => {
           id="todoInput"
           placeholder="Create a new todo..."
           value={todoInput}
-          onChange={handleChange}
+          onChange={inputChange}
         />
-       <button className="addBtn"style={{border:0,backgroundColor:"transparent"}}  type="submit">
-         <GrAdd/>
-        </button> 
+        <button
+          className="addBtn"
+          style={{ border: 0, backgroundColor: "transparent" }}
+          type="submit"
+        >
+          <GrAdd />
+        </button>
       </form>
     </div>
   );

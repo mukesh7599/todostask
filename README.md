@@ -7,7 +7,7 @@
 5. Clear all completed todos.
 6. Toggle light and dark mode.
 7. View the optimal layout for the app depending on their device's screen size.
-8. Data 
+8. Persist the state with local storage so that it remains after a page refresh
 
 ## Site
 [Live Site](https://todosapp-task.netlify.app/)

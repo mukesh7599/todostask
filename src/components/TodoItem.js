@@ -30,7 +30,7 @@ const TodoItem = ({ todo, todos, setTodos }) => {
   const activeNotification = (placement) => {
     notification.info({
       message: `warning`,
-      description: "Tasks Uncompleted",
+      description: "Tasks Incompleted",
       placement,
     });
   };
